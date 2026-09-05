@@ -1,6 +1,3 @@
-Here is the updated `README.md` file, now including the complete architectural flow diagram. You can copy and paste this directly into your GitHub repository.
-
-
 # LeJEPA-XAI: Active Learning & Explainable AI for Manufacturing Anomaly Detection
 
 <!-- [![Status: Pre-Release (Abstract Stage)](https://img.shields.io/badge/Status-Pre--Release-orange.svg)]()
