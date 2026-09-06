@@ -1,8 +1,7 @@
-# Intra-Cycle Joint-Embedding Predictive Architecture with Active Learning and Explainable AI for Manufacturing Anomaly Detection
+# Intra-Cycle Joint-Embedding Predictive Architecture with Active Learning for Explainable Anomaly Detection in Injection Moulding
 
-<!-- [![Status: Pre-Release (Abstract Stage)](https://img.shields.io/badge/Status-Pre--Release-orange.svg)]()
-[![Target: CIRP CMS](https://img.shields.io/badge/Target-CIRP_CMS-blue.svg)]() -->
-
+[![Status: Pre-Release (Abstract Stage)](https://img.shields.io/badge/Status-Pre--Release-orange.svg)]()
+[![Target: CIRP CMS 2027](https://img.shields.io/badge/Target-CIRP_CMS_2027-blue.svg)]()
 
 ## Abstract
 
