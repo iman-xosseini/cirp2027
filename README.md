@@ -1,4 +1,4 @@
-# LeJEPA-XAI: Active Learning & Explainable AI for Manufacturing Anomaly Detection
+# Intra-Cycle Joint-Embedding Predictive Architecture with Active Learning and Explainable AI for Manufacturing Anomaly Detection
 
 <!-- [![Status: Pre-Release (Abstract Stage)](https://img.shields.io/badge/Status-Pre--Release-orange.svg)]()
 [![Target: CIRP CMS](https://img.shields.io/badge/Target-CIRP_CMS-blue.svg)]() -->
