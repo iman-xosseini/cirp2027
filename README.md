@@ -107,7 +107,7 @@ This repository is currently in the **Abstract Submission** phase. Upcoming comm
 
 **Author:** Iman Hosseini (iman.hosseini@ijs.si)
 
-**Affiliation:** Inštitut Jožef Stefan (Department for Artificial Intelligence - E3)
+**Affiliation:** Institut Jožef Stefan (Department for Artificial Intelligence - E3)
 
 **Target Conference:** CIRP Conference on Manufacturing Systems (CMS)
 
