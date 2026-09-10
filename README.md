@@ -106,15 +106,18 @@ This repository is currently in the **Abstract Submission** phase. Upcoming comm
 
 ## Contact
 
-**Corresponding Author:** Iman Hosseini (iman.hosseini@ijs.si)
+### Authors
+- **Iman Hosseini**<sup>1,2,*</sup>
+- **Marko Grobelnik**<sup>1</sup>
+- **Elke Deckers**<sup>3,4</sup>
+- **Dunja Mladenić**<sup>1,2</sup>
 
-**Co-authors:** Marko Grobelnik, Elke Deckers, Dunja Mladenić
+### Affiliations
+1. Department for Artificial Intelligence, Jožef Stefan Institute, Jamova Cesta 39, Ljubljana 1000, Slovenia
+2. Jožef Stefan International Postgraduate School, Jamova Cesta 39, Ljubljana 1000, Slovenia
+3. Department of Mechanical Engineering, KU Leuven, Celestijnenlaan 300, Leuven 3001, Belgium
+4. Flanders Make@KU Leuven, Belgium
 
-**Affiliations:** 
-- Department for Artificial Intelligence, Jožef Stefan Institute, Jamova Cesta 39, Ljubljana 1000, Slovenia
-- Jožef Stefan International Postgraduate School, Jamova Cesta 39, Ljubljana 1000, Slovenia
-- Department of Mechanical Engineering, KU Leuven, Celestijnenlaan 300, Leuven 3001, Belgium
-- Flanders Make@KU Leuven, Belgium
+<sup>*</sup> *Corresponding author: iman.hosseini@ijs.si*
 
 **Target Conference:** CIRP Conference on Manufacturing Systems (CMS)
-
