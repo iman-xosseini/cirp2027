@@ -16,66 +16,69 @@ Traditional generative architectures struggle with noisy industrial sensor data,
 ## Proposed Architecture
 
 ```text
-            UNLABELED SINGLE MANUFACTURING CYCLE (Snapshot)
-                                  │
-               ┌──────────────────┴──────────────────┐
-               │                                     │
-             View 1                                View 2
-       (Available Sensors)                    (Masked Sensors)
-               │                                     │
-               ↓                                     ↓
-       Shared MLP Encoder                    Shared MLP Encoder
-               │                                     │
-               ↓                                     ↓
-      z1 (Context Embedding)                z2 (Target Embedding)
-               │                                     │
-               ↓                                     │
-        LeJEPA Predictor                             │
-               │                                     │
-               ↓                                     │
- z2_pred (Predicted Target Embedding)                │ (Stop-Gradient)
-               │                                     │
-               └──────────────────┬──────────────────┘
-                                  ↓
-                         Invariance + SIGReg
-                 (Loss: MSE + Variance Regularization)
-                                  │
-══════════════════════════════════│═════════════════════════════════════
- DOWNSTREAM TASKS                 │
-                                  ↓
-  ┌──────────────────────────────────────────────────────────────┐
-  │                   ACTIVE LEARNING LOOP                       │
-  │                                                              │
-  │ INPUTS RECEIVED:                                             │
-  │ 1. Trained Encoder      ─────────┐                           │
-  │ 2. Trained Predictor    ─────────┼─> Calculate Latent Error  │
-  │ 3. X_tensor (Full Data) ─────────┘   (Distance: z_target vs  │
-  │                                       z_pred on 50% mask)    │
-  │                                              │               │
-  │                                              ↓               │
-  │                      Query Indices (Top 300 uncertain cycles)│
-  │                                              │               │
-  │                                              ↓               │
-  │                            Train RandomForest Classifier     │
-  └──────────────────────────────────────────────┬───────────────┘
-                                                 │
-                                                 ↓
-  ┌──────────────────────────────────────────────────────────────┐
-  │                   EXPLAINABILITY (SHAP)                      │
-  │                                                              │
-  │ INPUTS RECEIVED:                                             │
-  │ 1. Trained Classifier (RandomForest) ───┐                    │
-  │ 2. X_active_learning (Queried Raw Data) ┼─> TreeExplainer    │
-  │                                         │                    │
-  │                                         ↓                    │
-  │                        SHAP Values (Feature Attributions)    │
-  │                                         │                    │
-  │                                         ↓                    │
-  │                           Physical Operating Window &        │
-  │                           Global Importance Reports          │
-  └──────────────────────────────────────────────────────────────┘
-
+        SELF-SUPERVISED PRE-TRAINING  
+        ┌─────────────────────────────────────────┐
+        │         ONE MANUFACTURING CYCLE         │
+        │         26 standardized sensors         │
+        └────────────────────┬────────────────────┘
+                             │
+        ┌────────────────────┬────────────────────┐
+        │                BLOCK MASK               │
+        │        9 correlated sensor blocks       │
+        └────────────────────┬────────────────────┘
+                  ┌──────────┴──────────┐
+            context view           target view
+         [ x * mask , mask ]      [ x , ones ]
+                  ↓                     ↓
+          ┌───────┬─────────────────────┬───────┐
+          │            SHARED ENCODER           │
+          │           52 → 64 → 32 → 8          │
+          │           LayerNorm + GELU          │
+          └───────┬─────────────────────┬───────┘
+              z_context             z_target
+                (8-d)                 (8-d)
+                  ↓                     │
+         ┌────────┬────────┐            │
+         │    PREDICTOR    │            │
+         │    8 → 32 → 8   │            │
+         └────────┬────────┘            │
+                  ↓                     │
+               z_pred                   │
+                  │                     │
+                  └──────────┬──────────┘
+        ┌────────────────────┬────────────────────┐
+        │                   LOSS                  │
+        │ MSE( z_target , z_pred )  +  λ · SIGReg │
+        └────────────────────┬────────────────────┘
+                             │
+        ═════════════════════│═════════════════════
+                             ↓
+        DOWNSTREAM   (labels enter here)
+        ┌─────────────────────────────────────────┐
+        │     ACTIVE LEARNING  (model frozen)     │
+        │ score = ‖z_target − z_pred‖  (10 masks) │
+        │     query the top 300 of 5232 cycles    │
+        └────────────────────┬────────────────────┘
+                             │
+        ┌────────────────────┬────────────────────┐
+        │              RANDOM FOREST              │
+        │    trained on the 300 raw sensor rows   │
+        └────────────────────┬────────────────────┘
+                             │
+        ┌────────────────────┬────────────────────┐
+        │                   SHAP                  │
+        │    attributions in engineering units    │
+        │        physical operating window        │
+        └────────────────────┬────────────────────┘
+                             │
+        ┌────────────────────┬────────────────────┐
+        │         DOMAIN EXPERT  (blinded)        │
+        │plausibility · actionability · root cause│
+        │         vs permuted-name control        │
+        └─────────────────────────────────────────┘
 ```
+
+
 
 The pipeline operates in three distinct phases:
 
