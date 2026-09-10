@@ -77,13 +77,13 @@ Traditional generative architectures struggle with noisy industrial sensor data,
         └─────────────────────────────────────────┘
 ```
 
-
-
 The pipeline operates in three distinct phases:
 
-1. **Self-Supervised Pre-Training (LeJEPA):** Utilizes an intra-cycle feature-masking strategy. A Shared MLP Encoder and Predictor network learn to predict the latent representations of missing sensor modalities based on available concurrent readings, stabilized by variance regularization.
-2. **Active Learning Loop:** The trained, frozen networks evaluate unlabelled datasets. Cycles with the highest epistemic uncertainty (measured via the Euclidean distance between predicted and true latent states) are queried for expert labeling, drastically reducing annotation bottlenecks.
-3. **Physical-Space Explainability (XAI):** A downstream classifier (Random Forest) is trained on the actively queried budget. SHAP (TreeExplainer) is applied directly to the *unmasked physical inputs* to trace anomalies back to tangible root causes (e.g., pressure or temperature variations), devoid of temporal confounding.
+1. **Self-Supervised Pre-Training (LeJEPA):** Utilizes an intra-cycle **correlated block-masking** strategy to prevent data leakage from highly correlated sensors. A Shared MLP Encoder (which explicitly receives both the masked data and the mask itself to avoid zero-value ambiguity) and a Predictor network learn to predict the latent representations of the full cycle based on available concurrent block readings. This training is stabilized by **Sketched Isotropic Gaussian Regularization (SIGReg)** applied to both live branches, which prevents representation collapse without needing stop-gradients or teacher networks.
+
+2. **Active Learning Loop:** The trained, frozen networks evaluate unlabelled datasets. Cycles with the highest epistemic uncertainty—measured via the Euclidean distance between predicted and true latent states and **averaged over 10 independent mask draws** to eliminate random noise—are queried for expert labeling (e.g., the top 300 cycles), drastically reducing annotation bottlenecks.
+
+3. **Physical-Space Explainability (XAI) & Human Validation:** A downstream classifier (Random Forest) is trained on the raw, unmasked physical inputs of the actively queried budget. SHAP (TreeExplainer) is applied directly to these physical inputs to trace anomalies back to tangible root causes (e.g., pressure or temperature variations) and define a 2D physical operating window, devoid of temporal confounding. Crucially, these explanations are then **blindly evaluated by a domain expert** for physical plausibility, actionability, and root cause against a permuted-name control to mathematically prove the explanations carry genuine sensor-specific information.
 
 ## Roadmap & Planned Evaluations
 
