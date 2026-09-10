@@ -110,13 +110,11 @@ This repository is currently in the **Abstract Submission** phase. Upcoming comm
 
 **Co-authors:** Marko Grobelnik, Elke Deckers, Dunja Mladenić
 
-**Affiliation:** Department for Artificial Intelligence, Jožef Stefan Institute, Jamova Cesta 39, Ljubljana 1000, Slovenia
-
-**Affiliation:** Jožef Stefan International Postgraduate School, Jamova Cesta 39, Ljubljana 1000, Slovenia
-
-**Affiliation:** Department of Mechanical Engineering, KU Leuven, Celestijnenlaan 300, Leuven 3001, Belgium
-
-**Affiliation:** Flanders Make@KU Leuven, Belgium
+**Affiliations:** 
+        - Department for Artificial Intelligence, Jožef Stefan Institute, Jamova Cesta 39, Ljubljana 1000, Slovenia
+        - Jožef Stefan International Postgraduate School, Jamova Cesta 39, Ljubljana 1000, Slovenia
+        - Department of Mechanical Engineering, KU Leuven, Celestijnenlaan 300, Leuven 3001, Belgium
+        - Flanders Make@KU Leuven, Belgium
 
 **Target Conference:** CIRP Conference on Manufacturing Systems (CMS)
 
