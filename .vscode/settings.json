@@ -1,6 +1,9 @@
 {
 	"python.analysis.diagnosticSeverityOverrides": {
         "reportOptionalSubscript": "none",
-		"reportArgumentType": "none"
+		"reportArgumentType": "none",
+		"reportAttributeAccessIssue": "none",
+		"reportCallIssue": "none",
+		
 	}
 }

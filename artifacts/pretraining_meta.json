@@ -1,0 +1,98 @@
+{
+  "main_seed": 42,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "main_info": {
+    "seed": 42,
+    "best_val": 0.08719668537378311,
+    "best_epoch": 61,
+    "stopped_at": 86,
+    "n_train": 4448,
+    "n_val": 784,
+    "train_time_s": 9.860131025314331,
+    "lam": 1.0,
+    "epochs": 150,
+    "latent_eff_rank": 2.13188802105163
+  },
+  "seed_infos": {
+    "0": {
+      "seed": 0,
+      "best_val": 0.09290014207363129,
+      "best_epoch": 33,
+      "stopped_at": 58,
+      "n_train": 4448,
+      "n_val": 784,
+      "train_time_s": 6.478273391723633,
+      "lam": 1.0,
+      "epochs": 150,
+      "latent_eff_rank": 2.098771180519808
+    },
+    "1": {
+      "seed": 1,
+      "best_val": 0.08343814313411713,
+      "best_epoch": 62,
+      "stopped_at": 87,
+      "n_train": 4448,
+      "n_val": 784,
+      "train_time_s": 9.709803581237793,
+      "lam": 1.0,
+      "epochs": 150,
+      "latent_eff_rank": 2.248922732808351
+    },
+    "2": {
+      "seed": 2,
+      "best_val": 0.08477188646793365,
+      "best_epoch": 93,
+      "stopped_at": 118,
+      "n_train": 4448,
+      "n_val": 784,
+      "train_time_s": 13.10883092880249,
+      "lam": 1.0,
+      "epochs": 150,
+      "latent_eff_rank": 2.776302092417646
+    },
+    "3": {
+      "seed": 3,
+      "best_val": 0.09527939558029175,
+      "best_epoch": 33,
+      "stopped_at": 58,
+      "n_train": 4448,
+      "n_val": 784,
+      "train_time_s": 6.54519510269165,
+      "lam": 1.0,
+      "epochs": 150,
+      "latent_eff_rank": 2.313579571729366
+    },
+    "4": {
+      "seed": 4,
+      "best_val": 0.08466489613056183,
+      "best_epoch": 92,
+      "stopped_at": 117,
+      "n_train": 4448,
+      "n_val": 784,
+      "train_time_s": 13.246209859848022,
+      "lam": 1.0,
+      "epochs": 150,
+      "latent_eff_rank": 2.9744770796500273
+    }
+  },
+  "config": {
+    "latent_dim": 8,
+    "encoder_hidden": [
+      64,
+      32
+    ],
+    "predictor_hidden": 32,
+    "keep_prob": 0.5,
+    "epochs": 150,
+    "batch_size": 256,
+    "lambda_sigreg": 1.0,
+    "val_frac": 0.15,
+    "patience": 25
+  }
+}

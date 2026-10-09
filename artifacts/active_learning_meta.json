@@ -1,0 +1,66 @@
+{
+  "seed": 42,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "labeling_budget": 300,
+  "scoring_mode": "mc",
+  "n_mask_draws": 10,
+  "test_frac": 0.25,
+  "pca_k": 4,
+  "n_found": 7,
+  "n_events": 2,
+  "enrichment_by_seed": {
+    "lejepa": [
+      11,
+      11,
+      12,
+      10,
+      9
+    ],
+    "random": [
+      3,
+      4,
+      2,
+      2,
+      2
+    ],
+    "pca": [
+      16,
+      16,
+      16,
+      16,
+      16
+    ]
+  },
+  "baseline_table": [
+    [
+      "LeJEPA latent error (mc)",
+      7,
+      2,
+      0.019574556609301637
+    ],
+    [
+      "LeJEPA latent error (exact)",
+      10,
+      1,
+      0.04543099049955579
+    ],
+    [
+      "PCA(4) reconstruction error",
+      16,
+      3,
+      0.06887618623856484
+    ],
+    [
+      "\u2016x\u2016 distance from mean cycle",
+      11,
+      9,
+      0.03525125680971229
+    ]
+  ]
+}

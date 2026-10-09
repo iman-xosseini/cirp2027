@@ -1,8 +1,14 @@
 .venv/
+.vscode/
+src/
 working/
+working_new_version/
 archive/
-Planning_the_paper_and_my_notes.md
-gemeni.md
+Debug/
+images/
+application/
+MyNotes/
 .markdownlint.json
 code_explanations.md
 
+__pycache__/
