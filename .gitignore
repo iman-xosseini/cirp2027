@@ -8,7 +8,10 @@ Debug/
 images/
 application/
 MyNotes/
-outputs/
+# Ignore the outputs folder and everything inside it
+outputs/**
+
+
 
 .markdownlint.json
 code_explanations.md
