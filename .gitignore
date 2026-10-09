@@ -8,6 +8,8 @@ Debug/
 images/
 application/
 MyNotes/
+outputs/
+
 .markdownlint.json
 code_explanations.md
 
