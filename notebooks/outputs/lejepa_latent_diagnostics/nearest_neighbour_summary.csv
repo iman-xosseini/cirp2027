@@ -1,0 +1,13 @@
+partition,class,n,share_defect_neighbours,share_same_type_neighbours,median_time_gap_h,note
+pool,pass,2908,0.009,,0.8,
+pool,gas,18,0.111,0.033,0.669,
+pool,short_shot,10,0.18,0.08,0.716,
+pool,startup,4,0.2,0.2,196.06,unstable (n < 10)
+tuning,pass,969,0.008,,0.777,
+tuning,gas,9,0.111,0.022,0.678,unstable (n < 10)
+tuning,short_shot,2,0.2,0.1,0.942,unstable (n < 10)
+tuning,startup,2,0.8,0.8,0.076,unstable (n < 10)
+test,pass,1293,0.005,,0.826,
+test,gas,8,0.0,0.0,1.182,unstable (n < 10)
+test,short_shot,3,0.0,0.0,0.48,unstable (n < 10)
+test,startup,4,0.4,0.4,87.586,unstable (n < 10)

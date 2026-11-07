@@ -1,0 +1,5 @@
+partition,pass,gas,short_shot,startup,records,defect share %,groups (shots)
+pool,2908,18,10,4,2940,1.09,1476
+tuning,969,9,2,2,982,1.32,492
+test,1293,8,3,4,1308,1.15,656
+all,5170,35,15,10,5230,1.15,2624

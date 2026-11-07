@@ -1,0 +1,21 @@
+check,status,value
+"embedding shape = (records, latent_dim)",PASS,"(5230, 8)"
+all embedding values finite,PASS,0
+no degenerate latent dimension (pool std > 1e-6),PASS,"[0.1772, 0.6203, 0.7539, 0.8037, 0.6304, 0.7485, 0.5206, 0.5357]"
+pool effective rank (of latent_dim),PASS,2.043 / 8
+record_id unique,PASS,0
+no missing records (rows = manifest),PASS,5230
+seed 0: pool effective rank and latent variance equal notebook 02,PASS,2.0433 / 0.3933
+seed 1: pool effective rank and latent variance equal notebook 02,PASS,2.0924 / 0.3919
+seed 2: pool effective rank and latent variance equal notebook 02,PASS,2.0924 / 0.3929
+seed 3: pool effective rank and latent variance equal notebook 02,PASS,2.1234 / 0.3947
+seed 4: pool effective rank and latent variance equal notebook 02,PASS,2.0868 / 0.3835
+paired part records (same shot) have identical embeddings,PASS,"2606 pairs, max |diff| 0.0e+00"
+no label / metadata column among model inputs,PASS,24 sensors
+encoder input width = 2 x sensors (values + mask channel),PASS,48
+labels not loaded before section 4,PASS,by construction
+"seed 0: pool ids aligned, scores and top-300 selection reproduced",PASS,300 selected
+"seed 1: pool ids aligned, scores and top-300 selection reproduced",PASS,300 selected
+"seed 2: pool ids aligned, scores and top-300 selection reproduced",PASS,300 selected
+"seed 3: pool ids aligned, scores and top-300 selection reproduced",PASS,300 selected
+"seed 4: pool ids aligned, scores and top-300 selection reproduced",PASS,300 selected

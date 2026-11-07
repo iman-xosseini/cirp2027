@@ -1,0 +1,16 @@
+episode,start,end,defect_records,shots,types,partitions,parts
+1,2020-10-16 05:21:38,2020-10-16 05:57:20,17,14,"gas 13, short_shot 4","pool 10, test 4, tuning 3","CN7 W/S SIDE MLD'G LH, CN7 W/S SIDE MLD'G RH"
+2,2020-10-22 00:51:52,2020-10-22 01:26:54,4,4,"gas 3, short_shot 1","tuning 3, pool 1","RG3 MOLD'G W/SHLD, RH"
+3,2020-10-22 01:57:47,2020-10-22 01:57:47,1,1,gas 1,pool 1,"RG3 MOLD'G W/SHLD, RH"
+4,2020-10-22 04:46:36,2020-10-22 05:10:17,5,5,"gas 4, short_shot 1","pool 3, test 2","RG3 MOLD'G W/SHLD, RH"
+5,2020-10-22 05:42:13,2020-10-22 06:12:03,3,3,"short_shot 2, gas 1","test 1, tuning 1, pool 1","RG3 MOLD'G W/SHLD, RH"
+6,2020-10-22 06:58:22,2020-10-22 06:58:22,1,1,short_shot 1,pool 1,"RG3 MOLD'G W/SHLD, RH"
+7,2020-10-22 07:37:31,2020-10-22 07:37:31,1,1,gas 1,test 1,"RG3 MOLD'G W/SHLD, RH"
+8,2020-10-23 01:03:33,2020-10-23 01:24:09,2,2,gas 2,"tuning 1, test 1","RG3 MOLD'G W/SHLD, RH"
+9,2020-10-23 02:01:11,2020-10-23 02:25:54,2,2,"gas 1, short_shot 1","pool 1, test 1","RG3 MOLD'G W/SHLD, RH"
+10,2020-10-23 05:15:46,2020-10-23 05:15:46,1,1,gas 1,pool 1,"RG3 MOLD'G W/SHLD, RH"
+11,2020-10-23 05:47:40,2020-10-23 05:59:00,3,3,"short_shot 2, gas 1","pool 2, test 1","RG3 MOLD'G W/SHLD, RH"
+12,2020-10-23 07:15:11,2020-10-23 07:21:20,2,2,gas 2,"tuning 1, pool 1","RG3 MOLD'G W/SHLD, RH"
+13,2020-10-27 00:56:21,2020-10-27 01:05:41,10,5,startup 10,"test 4, pool 4, tuning 2","CN7 W/S SIDE MLD'G LH, CN7 W/S SIDE MLD'G RH"
+14,2020-11-03 04:44:17,2020-11-03 04:44:17,1,1,short_shot 1,tuning 1,CN7 W/S SIDE MLD'G LH
+15,2020-11-04 05:17:45,2020-11-04 05:33:13,7,7,"gas 5, short_shot 2","pool 6, tuning 1","RG3 MOLD'G W/SHLD, LH, RG3 MOLD'G W/SHLD, RH"

@@ -1,0 +1,25 @@
+{
+  "drop_dead_sensors": true,
+  "latent_dim": 8,
+  "enc_hidden": [
+    64,
+    32
+  ],
+  "pred_hidden": 32,
+  "keep_prob": 0.5,
+  "lam": 1.0,
+  "n_mask_draws": 50,
+  "scoring_mode": "mc",
+  "lr": 0.003,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "budget": 300,
+  "equipment": "S14"
+}

@@ -1,0 +1,17 @@
+phase,quantity,value
+data,machine / records x sensors,S14 / 5230 x 24 (of 5232 CSV rows)
+data,defects (base rate),"60 (1.15%): gas 35, short_shot 15, startup 10"
+data,"groups (machine, timestamp)",2624
+data,pool / tuning / test records (defects),2940 (32) / 982 (13) / 1308 (15)
+data,constant sensors removed / near-constant,['Barrel_Temperature_7'] / ['Switch_Over_Position'] (dropped=True)
+data,pool effective rank / PCs for 95% / blocks,2.9 / 4 / 6
+pre-training,"seed 42: best val (epoch / stopped), time","0.1129 (139 / 150), 11 s"
+pre-training,validation protocol,"5 fixed mask draws, fixed SIGReg directions, group-aware 15% split"
+baseline (mc-50),LeJEPA / random / PCA defects per 300,11.00 ± 2.12 / 3.40 ± 1.52 / 11.00 ± 0.00
+experiment A,frozen scoring mode,exact
+final configuration,name,'Baseline (frozen scoring)' (fixed to the archived choice)
+"final (pool, exact)",LeJEPA defects / defective groups,12.60 ± 1.82 / 8.80 ± 1.79
+"final (pool, exact)",random defects / defective groups,3.40 ± 1.52 / 3.40 ± 1.52
+"final (pool, exact)",PCA defects / defective groups,11.00 ± 0.00 / 9.00 ± 0.00
+artifacts,exported for notebook 03,notebooks/outputs/02_architecture_updated/artifacts/ (5 models)
+runtime,whole notebook,"6.9 min, CPU only"

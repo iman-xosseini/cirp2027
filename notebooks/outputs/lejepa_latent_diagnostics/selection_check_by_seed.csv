@@ -1,0 +1,16 @@
+seed,method,selected,distinct shots,defects found,reported by 02,match,defective shots,Jaccard with PCA selection
+0,LeJEPA latent prediction error (exact),300,155,15,15,True,11,0.154
+0,PCA(3) reconstruction error,300,151,11,11,True,9,
+0,Random sampling,300,283,3,3,True,3,
+1,LeJEPA latent prediction error (exact),300,150,12,12,True,9,0.163
+1,PCA(3) reconstruction error,300,151,11,11,True,9,
+1,Random sampling,300,286,1,1,True,1,
+2,LeJEPA latent prediction error (exact),300,150,11,11,True,7,0.124
+2,PCA(3) reconstruction error,300,151,11,11,True,9,
+2,Random sampling,300,278,5,5,True,5,
+3,LeJEPA latent prediction error (exact),300,150,14,14,True,10,0.195
+3,PCA(3) reconstruction error,300,151,11,11,True,9,
+3,Random sampling,300,283,4,4,True,4,
+4,LeJEPA latent prediction error (exact),300,156,11,11,True,7,0.134
+4,PCA(3) reconstruction error,300,151,11,11,True,9,
+4,Random sampling,300,286,4,4,True,4,

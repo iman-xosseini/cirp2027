@@ -1,0 +1,16 @@
+Configuration,Seed,Total defects / 300,Gas,Short shot,Startup,Distinct groups queried,Effective rank,Latent variance,Runtime
+Baseline,0,14,6,4,4,223,2.043318945482933,0.3932862877845764,10.77571177482605
+Baseline,1,11,5,3,3,218,2.0923635645108036,0.3918752670288086,11.053993701934814
+Baseline,2,9,3,2,4,211,2.0923808122646013,0.39293789863586426,11.377228498458862
+Baseline,3,12,6,2,4,215,2.1234138184905444,0.3946970999240875,11.16016674041748
+Baseline,4,9,3,2,4,216,2.0867889628295004,0.383452445268631,12.414664506912231
+Random sampling,0,3,2,1,0,283,,,
+PCA(3) reconstruction error,0,11,5,2,4,151,,,
+Random sampling,1,1,1,0,0,286,,,
+PCA(3) reconstruction error,1,11,5,2,4,151,,,
+Random sampling,2,5,4,1,0,278,,,
+PCA(3) reconstruction error,2,11,5,2,4,151,,,
+Random sampling,3,4,2,2,0,283,,,
+PCA(3) reconstruction error,3,11,5,2,4,151,,,
+Random sampling,4,4,2,2,0,286,,,
+PCA(3) reconstruction error,4,11,5,2,4,151,,,

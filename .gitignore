@@ -1,8 +1,10 @@
 .venv/
 .vscode/
+
 src/
 working/
 working_new_version/
+working_new_changes_after_talking_with_lorenzo/
 archive/
 Debug/
 images/

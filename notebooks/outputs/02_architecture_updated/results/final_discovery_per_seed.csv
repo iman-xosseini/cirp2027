@@ -1,0 +1,16 @@
+Method,Seed,Selected part records,Distinct groups selected,Defects found,Gas,Short shot,Startup,Defective groups,Enrichment vs pool base rate
+LeJEPA latent prediction error (exact),0,300,155,15,6,5,4,11,4.593750000000001
+Random sampling,0,300,283,3,2,1,0,3,0.9187500000000001
+PCA(3) reconstruction error,0,300,151,11,5,2,4,9,3.3687500000000004
+LeJEPA latent prediction error (exact),1,300,150,12,6,2,4,9,3.6750000000000003
+Random sampling,1,300,286,1,1,0,0,1,0.30625
+PCA(3) reconstruction error,1,300,151,11,5,2,4,9,3.3687500000000004
+LeJEPA latent prediction error (exact),2,300,150,11,4,3,4,7,3.3687500000000004
+Random sampling,2,300,278,5,4,1,0,5,1.5312500000000002
+PCA(3) reconstruction error,2,300,151,11,5,2,4,9,3.3687500000000004
+LeJEPA latent prediction error (exact),3,300,150,14,6,4,4,10,4.2875000000000005
+Random sampling,3,300,283,4,2,2,0,4,1.225
+PCA(3) reconstruction error,3,300,151,11,5,2,4,9,3.3687500000000004
+LeJEPA latent prediction error (exact),4,300,156,11,4,3,4,7,3.3687500000000004
+Random sampling,4,300,286,4,2,2,0,4,1.225
+PCA(3) reconstruction error,4,300,151,11,5,2,4,9,3.3687500000000004
