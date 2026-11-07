@@ -15,7 +15,7 @@ outputs/**
 
 
 notebooks/archive_removed_human_evaluation/**
-
+notebooks/README.md
 
 
 .markdownlint.json
